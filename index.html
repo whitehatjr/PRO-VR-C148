@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Textures</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-a-assets>
+        <a-asset-item id="bench" src="assets/bench/scene.gltf"></a-asset-item>
+        <a-asset-item id="street" src="assets/street/scene.gltf"></a-asset-item>
+        <a-asset-item id="lamp" src="assets/lamp/scene.gltf"></a-asset-item>
+        <a-asset-item id="cat" src="assets/cat/scene.gltf"></a-asset-item>
+        <a-asset-item id="girl" src="assets/girl/scene.gltf"></a-asset-item>
+      </a-a-assets>
+      <!-- BG scene -->
+      <a-box
+        id="wall"
+        src="https://image.freepik.com/free-vector/cartoon-night-landscape_96980-186.jpg"
+        position="0 7.5 -4.5"
+        width="32"
+        height="25"
+      >
+      </a-box>
+
+      <!-- Street -->
+      <a-entity>
+        <a-entity
+          id="ground"
+          scale="0.02 0.03 0.03"
+          gltf-model="#street"
+          position="0 0 -1"
+          rotation="0 90 0"
+        ></a-entity>
+
+        <a-entity
+          id="ground"
+          scale="0.02 0.03 0.03"
+          gltf-model="#street"
+          position="0 0 3"
+          rotation="0 90 0"
+        ></a-entity>
+      </a-entity>
+
+      <!-- Bench -->
+      <a-entity
+        scale="1.5 1.5 1.5"
+        gltf-model="#bench"
+        position="0 0 3"
+      ></a-entity>
+
+      <!-- Street Lamp -->
+      <a-entity
+        scale="0.5 0.5 0.4"
+        gltf-model="#lamp"
+        position="-6 0 0"
+      ></a-entity>
+
+      <!-- Cat -->
+      <a-entity
+        scale="0.03 0.03 0.03"
+        gltf-model="#cat"
+        position="3 2 4"
+        rotation="0 -40 0"
+      ></a-entity>
+
+      <!-- Girl -->
+      <a-entity
+        scale="0.003 0.003 0.003"
+        gltf-model="#girl"
+        position="-2 0.4 3"
+      ></a-entity>
+      <!--  --------- CAMERA --------- -->
+
+      <a-camera look-controls-enabled wasd-controls-enabled position="0 5 15">
+      </a-camera>
+    </a-scene>
+    <!-- Closing scene -->
+  </body>
+</html>
